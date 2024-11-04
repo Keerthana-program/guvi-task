@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Income & Expense Tracker</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="expense.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Income & Expense Tracker</h1>
+    <h2>You save money,money safes you</h2>
+    <div class="totals">
+      <div class="total-item">Total Income: <span id="total-income">0</span> <i class="fa-solid fa-indian-rupee-sign"></i></div>
+      <div class="total-item">Total Expenses: <span id="total-expenses">0</span> <i class="fa-solid fa-indian-rupee-sign"></i></div>
+      <div class="total-item">Net Balance: <span id="net-balance">0</span> <i class="fa-solid fa-indian-rupee-sign"></i></div>
+    </div>
+
+    <div class="input-section">
+      <input type="text" id="description" placeholder="Description">
+      <input type="number" id="amount" placeholder="Amount">
+      <select id="type">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+      <input type="date" id="target-date" placeholder="DD-MM-YYY">
+      <button id="add-button">Add</button>
+      <button id="reset-button">Reset</button>
+    </div>
+
+    <div class="filters">
+      <label><input type="radio" name="filter" value="all" checked> All</label>
+      <label><input type="radio" name="filter" value="income"> Income</label>
+      <label><input type="radio" name="filter" value="expense"> Expense</label>
+    </div>
+
+    <div class="entries">
+      <h3>Entries</h3>
+      <ul id="entry-list"></ul>
+    </div>
+  </div>
+
+  <script src="expense.js"></script>
+
+</body>
+</html>
