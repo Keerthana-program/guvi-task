@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add to index.css */
+.cart-modal-enter {
+    transform: translateX(100%);
+  }
+  
+  .cart-modal-enter-active {
+    transform: translateX(0);
+    transition: transform 300ms;
+  }
+  
+  .cart-modal-exit {
+    transform: translateX(0);
+  }
+  
+  .cart-modal-exit-active {
+    transform: translateX(100%);
+    transition: transform 300ms;
+  }
