@@ -132,3 +132,39 @@ section .card4{
 section .card4 img{
     width: 500px;
 }
+
+.search-container {
+    margin-top: 30px;
+  }
+  
+  .search-box {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .dropdown label {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .dropdown select {
+    padding: 10px;
+    margin-top: 5px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .explore-btn {
+    background: #ff6633;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
