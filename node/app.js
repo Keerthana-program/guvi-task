@@ -1,13 +1,18 @@
 const express = require('express');
-const connectDB = require('./config/db'); // Update this path if needed
-require('dotenv').config(); // Loads .env file into process.env (only needed locally)
-
 const app = express();
+const recipeRoutes = require('./routes/recipeRoutes'); // Correct path to the route file
+
+app.use(express.json());
+
+// Use the routes for all recipe-related endpoints
+app.use('/api/recipes', recipeRoutes);
+
+// Default route for the root URL
+app.get('/', (req, res) => {
+  res.send('Welcome to the Recipe API');
+});
+
 const PORT = process.env.PORT || 3000;
-
-// Connect to the database
-connectDB();
-
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });
